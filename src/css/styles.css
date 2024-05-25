@@ -8,18 +8,117 @@
 @import url('./vite-promo.css');
 @import url('./header.css');
 
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+@import url('./loader.css');
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+@import 'izitoast/dist/css/iziToast.min.css';
+@import 'simplelightbox/dist/simple-lightbox.min.css';
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-btn {
+  margin-left: 20px;
+  background-color: rgb(3, 41, 80);
+  border-radius: 8px;
+  border: none;
+  height: 40px;
+  width: 100px;
+  color: antiquewhite;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-btn:hover {
+  background-color: rgb(94, 94, 155);
+}
+
+.search-input {
+  width: 250px;
+  height: 35px;
+  border-radius: 8px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-input:hover {
+  border-color: rgba(30, 29, 29, 0.504);
+}
+
+.search-input:focus,
+.search-input:active {
+  border-color: black;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+  max-width: 70%;
+  list-style: none;
+  margin: 0 auto;
+}
+
+.basicLightbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.basicLightbox img {
+  max-width: 80%;
+  max-height: 80%;
+}
+.photo {
+  height: 300px;
+  width: 360px;
+}
+.info-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title {
+  display: flex;
+  justify-content: space-around;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background-color: #d08989;
+  color: black;
+  opacity: 80%;
+}
+
+.photo-container {
+  border: 1px solid #9d3c3c;
+  max-width: 360px;
+}
+
+.bottombtn{
+  background-color: rgb(3, 41, 80);
+    border-radius: 8px;
+    border: none;
+    height: 40px;
+    width: 100px;
+    color: antiquewhite;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-left: 700px;
+    margin-top: 30px;
+    
+
+}
+
+.is-hidden {
+  display: none;
 }
