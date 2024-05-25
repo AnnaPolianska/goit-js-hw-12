@@ -1,5 +1,5 @@
-//import SimpleLightbox from 'simplelightbox';
-//import 'simplelightbox/dist/simple-lightbox.min.css';
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import { createMarkupFunction } from './js/render-functions';
@@ -64,11 +64,12 @@ async function fetchAndRenderPhotosFunction() {
     }
 //checking if we reached a limit of pages
     if (page >= totalPages || imagesData.hits.length < limit) {
+
       loadMore.classList.add('is-hidden');
       iziToast.error({
       position: 'topRight',
       timeout: 2000,
-      message: 'We are sorry, but you have reached the end of search results.'}
+      message: "We're sorry, but you've reached the end of search results."}
       )
     } else {
       loadMore.classList.remove('is-hidden');
