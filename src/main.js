@@ -60,11 +60,16 @@ async function fetchAndRenderPhotosFunction() {
         captionsDelay: 250,
       });
     } else {
-      //lightbox.refresh();
+      lightbox.refresh();
     }
 //checking if we reached a limit of pages
     if (page >= totalPages || imagesData.hits.length < limit) {
       loadMore.classList.add('is-hidden');
+      iziToast.error({
+      position: 'topRight',
+      timeout: 2000,
+      message: 'We are sorry, but you have reached the end of search results.'}
+      )
     } else {
       loadMore.classList.remove('is-hidden');
     }
